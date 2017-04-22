@@ -1,6 +1,7 @@
 {
   "name": "guacamole-common-js-bower",
   "description": "Bower package for guacamole-common-js of guacamole-clien",
+  "version": "1.0.1",
   "main": "index.js",
   "authors": [
     "<esmailpour.hosein@gmail.com>"

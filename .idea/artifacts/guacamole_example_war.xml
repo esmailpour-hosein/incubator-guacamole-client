@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="guacamole-example:war">
+    <output-path>$PROJECT_DIR$/doc/guacamole-example/target</output-path>
+    <root id="archive" name="guacamole-example-0.9.12-incubating.war">
+      <element id="artifact" artifact-name="guacamole-example:war exploded" />
+    </root>
+  </artifact>
+</component>

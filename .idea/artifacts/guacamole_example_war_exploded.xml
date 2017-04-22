@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="guacamole-example:war exploded">
+    <output-path>$PROJECT_DIR$/doc/guacamole-example/target/guacamole-example-0.9.12-incubating</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="guacamole-example" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="guacamole-common-js-0.9.12-incubating.zip">
+            <element id="module-output" name="guacamole-common-js" />
+          </element>
+          <element id="archive" name="guacamole-common-0.9.10-incubating.jar">
+            <element id="module-output" name="guacamole-common" />
+          </element>
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.7" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/doc/guacamole-example/target/guacamole-example-0.9.12-incubating/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="guacamole-example/web/Web" />
+    </root>
+  </artifact>
+</component>
