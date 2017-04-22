@@ -1,8 +1,8 @@
 {
   "name": "guacamole-common-js-bower",
   "description": "Bower package for guacamole-common-js of guacamole-clien",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.0.3",
+  "main": "dist/guacamole-common-js.js",
   "authors": [
     "<esmailpour.hosein@gmail.com>"
   ],
@@ -20,7 +20,17 @@
     "node_modules",
     "bower_components",
     "guacamole-common-js",
+    "guacamole-common",
+    "guacamole-docker",
+    "guacamole-ext",
+    "guacamole",
+    "doc",
+    "extensions",
     "pom.xml",
+    ".dockerignore",
+    "Dockerfile",
+    "DISCLAIMER",
+    "project-assembly.xml",
     "test",
     "tests"
   ]
