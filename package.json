@@ -1,0 +1,38 @@
+{
+  "name": "guacamole-common-js-npm",
+  "version": "1.0.0",
+  "description": "Npm package for guacamole-common-js of guacamole-client",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanret": "cp --help‌",
+    "copyToSrc": "cp -r guacamole-common-js/src/main/webapp/modules/ src",
+    "concat": "mkdir -p dist && concat-cli -f src/**.js -o dist/guacamole-common-js.js",
+    "uglify": "uglifyjs dist/guacamole-common-js.js -o dist/guacamole-common-js.min.js --source-map dist/guacamole-common-js.min.js.map",
+    "build": "npm run copyToSrc && npm run concat‌‌"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esmailpour-hosein/incubator-guacamole-client.git"
+  },
+  "keywords": [
+    "guacamole",
+    "guacamole-common-js",
+    "common-js",
+    "dev"
+  ],
+  "author": " <esmailpour.hosein@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esmailpour-hosein/incubator-guacamole-client/issues"
+  },
+  "homepage": "https://github.com/esmailpour-hosein/incubator-guacamole-client#readme",
+  "devDependencies": {
+    "concat-cli": "^4.0.0",
+    "rimraf": "^2.6.1",
+    "uglifyjs": "^2.4.10"
+  }
+}

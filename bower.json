@@ -1,0 +1,24 @@
+{
+  "name": "guacamole-common-js-bower",
+  "description": "Bower package for guacamole-common-js of guacamole-clien",
+  "main": "index.js",
+  "authors": [
+    "<esmailpour.hosein@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "guacamole",
+    "guacamole-common-js",
+    "common-js",
+    "dev"
+  ],
+  "homepage": "https://github.com/esmailpour-hosein/incubator-guacamole-client",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
