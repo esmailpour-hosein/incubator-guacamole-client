@@ -19,6 +19,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "guacamole-common-js",
+    "pom.xml",
     "test",
     "tests"
   ]
