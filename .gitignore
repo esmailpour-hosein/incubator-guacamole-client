@@ -1,5 +1,6 @@
 *~
 target/
-/.idea/
+.idea/
 
-/guacamole-client.iml
+guacamole-client.iml
+
