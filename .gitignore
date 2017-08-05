@@ -2,5 +2,11 @@
 target/
 .idea/
 
+guacamole/
+guacamole-common/
+guacamole-ext/
+extensions/
+doc/
+
 guacamole-client.iml
 
