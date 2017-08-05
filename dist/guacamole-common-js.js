@@ -73,7 +73,8 @@ Guacamole.ArrayBufferReader = function(stream) {
      */
     this.onend = null;
 
-};/*
+};
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -196,6 +197,7 @@ Guacamole.ArrayBufferWriter = function(stream) {
  * @type {Number}
  */
 Guacamole.ArrayBufferWriter.DEFAULT_BLOB_LENGTH = 6048;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -275,6 +277,7 @@ Guacamole.AudioContextFactory = {
     }
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -780,6 +783,7 @@ Guacamole.RawAudioPlayer.getSupportedTypes = function getSupportedTypes() {
     ];
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1347,6 +1351,7 @@ Guacamole.RawAudioRecorder.getSupportedTypes = function getSupportedTypes() {
     ];
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1474,7 +1479,8 @@ Guacamole.BlobReader = function(stream, mimetype) {
      */
     this.onend = null;
 
-};/*
+};
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -1719,6 +1725,7 @@ Guacamole.BlobWriter = function BlobWriter(stream) {
     this.oncomplete = null;
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -3374,6 +3381,7 @@ Guacamole.Client.DefaultTransferFunction = {
     }
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -3457,7 +3465,8 @@ Guacamole.DataURIReader = function(stream, mimetype) {
      */
     this.onend = null;
 
-};/*
+};
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -4939,6 +4948,7 @@ Guacamole.Display.VisibleLayer = function(width, height) {
  * @type {Number}
  */
 Guacamole.Display.VisibleLayer.__next_id = 0;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -5009,6 +5019,7 @@ Guacamole.InputStream = function(client, index) {
     };
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -5085,6 +5096,7 @@ Guacamole.IntegerPool = function() {
     };
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -5199,6 +5211,7 @@ Guacamole.JSONReader = function guacamoleJSONReader(stream) {
     this.onend = null;
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -6378,6 +6391,7 @@ Guacamole.Keyboard.ModifierState.fromKeyboardEvent = function(e) {
     return state;
     
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -7356,6 +7370,7 @@ Guacamole.Layer.Pixel = function(r, g, b, a) {
     this.alpha = a;
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -8443,6 +8458,7 @@ Guacamole.Mouse.Touchscreen = function(element) {
     }, false);
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -8469,6 +8485,7 @@ Guacamole.Mouse.Touchscreen = function(element) {
  * @namespace
  */
 var Guacamole = Guacamole || {};
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -8679,6 +8696,7 @@ Guacamole.Object.ROOT_STREAM = '/';
  * @type {String}
  */
 Guacamole.Object.STREAM_INDEX_MIMETYPE = 'application/vnd.glyptodon.guacamole.stream-index+json';
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -9622,6 +9640,7 @@ Guacamole.OnScreenKeyboard.Key = function(template, name) {
     this.requires = template.requires || [];
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -9690,6 +9709,7 @@ Guacamole.OutputStream = function(client, index) {
     };
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -9813,7 +9833,7 @@ Guacamole.Parser = function() {
 
                 // Parse length
                 var length = parseInt(buffer.substring(element_end+1, length_end));
-                if (length == NaN)
+                if (isNaN(length))
                     throw new Error("Non-numeric character in element length.");
 
                 // Calculate start of element
@@ -9846,6 +9866,7 @@ Guacamole.Parser = function() {
     this.oninstruction = null;
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -9992,6 +10013,7 @@ Guacamole.RawAudioFormat.parse = function parseFormat(mimetype) {
     });
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -10053,6 +10075,17 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
      * @type {Number}
      */
     var KEYFRAME_TIME_INTERVAL = 5000;
+
+    /**
+     * The maximum amount of time to spend in any particular seek operation
+     * before returning control to the main thread, in milliseconds. Seek
+     * operations exceeding this amount of time will proceed asynchronously.
+     *
+     * @private
+     * @constant
+     * @type {Number}
+     */
+    var MAXIMUM_SEEK_TIME = 5;
 
     /**
      * All frames parsed from the provided tunnel.
@@ -10135,14 +10168,14 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
     var startRealTimestamp = null;
 
     /**
-     * The ID of the timeout which will play the next frame, if playback is in
-     * progress. If playback is not in progress, the ID stored here (if any)
-     * will not be valid.
+     * The ID of the timeout which will continue the in-progress seek
+     * operation. If no seek operation is in progress, the ID stored here (if
+     * any) will not be valid.
      *
      * @private
      * @type {Number}
      */
-    var playbackTimeout = null;
+    var seekTimeout = null;
 
     // Start playback client connected
     playbackClient.connect();
@@ -10288,50 +10321,96 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
 
     /**
      * Moves the playback position to the given frame, resetting the state of
-     * the playback client and replaying frames as necessary.
+     * the playback client and replaying frames as necessary. The seek
+     * operation will proceed asynchronously. If a seek operation is already in
+     * progress, that seek is first aborted. The progress of the seek operation
+     * can be observed through the onseek handler and the provided callback.
      *
      * @private
      * @param {Number} index
      *     The index of the frame which should become the new playback
      *     position.
+     *
+     * @param {function} callback
+     *     The callback to invoke once the seek operation has completed.
+     *
+     * @param {Number} [delay=0]
+     *     The number of milliseconds that the seek operation should be
+     *     scheduled to take.
      */
-    var seekToFrame = function seekToFrame(index) {
+    var seekToFrame = function seekToFrame(index, callback, delay) {
 
-        var startIndex;
+        // Abort any in-progress seek
+        abortSeek();
 
-        // Back up until startIndex represents current state
-        for (startIndex = index; startIndex >= 0; startIndex--) {
+        // Replay frames asynchronously
+        seekTimeout = window.setTimeout(function continueSeek() {
 
-            var frame = frames[startIndex];
+            var startIndex;
 
-            // If we've reached the current frame, startIndex represents
-            // current state by definition
-            if (startIndex === currentFrame)
-                break;
+            // Back up until startIndex represents current state
+            for (startIndex = index; startIndex >= 0; startIndex--) {
 
-            // If frame has associated absolute state, make that frame the
-            // current state
-            if (frame.clientState) {
-                playbackClient.importState(frame.clientState);
-                break;
+                var frame = frames[startIndex];
+
+                // If we've reached the current frame, startIndex represents
+                // current state by definition
+                if (startIndex === currentFrame)
+                    break;
+
+                // If frame has associated absolute state, make that frame the
+                // current state
+                if (frame.clientState) {
+                    playbackClient.importState(frame.clientState);
+                    break;
+                }
+
             }
 
-        }
+            // Advance to frame index after current state
+            startIndex++;
 
-        // Advance to frame index after current state
-        startIndex++;
+            var startTime = new Date().getTime();
 
-        // Replay any applicable incremental frames
-        for (; startIndex <= index; startIndex++)
-            replayFrame(startIndex);
+            // Replay any applicable incremental frames
+            for (; startIndex <= index; startIndex++) {
 
-        // Current frame is now at requested index
-        currentFrame = index;
+                // Stop seeking if the operation is taking too long
+                var currentTime = new Date().getTime();
+                if (currentTime - startTime >= MAXIMUM_SEEK_TIME)
+                    break;
 
-        // Notify of changes in position
-        if (recording.onseek)
-            recording.onseek(recording.getPosition());
+                replayFrame(startIndex);
+            }
 
+            // Current frame is now at requested index
+            currentFrame = startIndex - 1;
+
+            // Notify of changes in position
+            if (recording.onseek)
+                recording.onseek(recording.getPosition());
+
+            // If the seek operation has not yet completed, schedule continuation
+            if (currentFrame !== index)
+                seekToFrame(index, callback,
+                    Math.max(delay - (new Date().getTime() - startTime), 0));
+
+            // Notify that the requested seek has completed
+            else
+                callback();
+
+        }, delay || 0);
+
+    };
+
+    /**
+     * Aborts the seek operation currently in progress, if any. If no seek
+     * operation is in progress, this function has no effect.
+     *
+     * @private
+     */
+    var abortSeek = function abortSeek() {
+        window.clearTimeout(seekTimeout);
     };
 
     /**
@@ -10342,9 +10421,6 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
      * @private
      */
     var continuePlayback = function continuePlayback() {
-
-        // Advance to next frame
-        seekToFrame(currentFrame + 1);
 
         // If frames remain after advancing, schedule next frame
         if (currentFrame + 1 < frames.length) {
@@ -10361,7 +10437,7 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
             var delay = Math.max(nextRealTimestamp - new Date().getTime(), 0);
 
             // Advance to next frame after enough time has elapsed
-            playbackTimeout = window.setTimeout(function frameDelayElapsed() {
+            seekToFrame(currentFrame + 1, function frameDelayElapsed() {
                 continuePlayback();
             }, delay);
 
@@ -10496,7 +10572,9 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
      * until no further frames exist. Playback is initially paused when a
      * Guacamole.SessionRecording is created, and must be explicitly started
      * through a call to this function. If playback is already in progress,
-     * this function has no effect.
+     * this function has no effect. If a seek operation is in progress,
+     * playback resumes at the current position, and the seek is aborted as if
+     * completed.
      */
     this.play = function play() {
 
@@ -10525,12 +10603,17 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
      * Seeks to the given position within the recording. If the recording is
      * currently being played back, playback will continue after the seek is
      * performed. If the recording is currently paused, playback will be
-     * paused after the seek is performed.
+     * paused after the seek is performed. If a seek operation is already in
+     * progress, that seek is first aborted. The seek operation will proceed
+     * asynchronously.
      *
      * @param {Number} position
      *     The position within the recording to seek to, in milliseconds.
+     *
+     * @param {function} [callback]
+     *     The callback to invoke once the seek operation has completed.
      */
-    this.seek = function seek(position) {
+    this.seek = function seek(position, callback) {
 
         // Do not seek if no frames exist
         if (frames.length === 0)
@@ -10541,21 +10624,31 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
         recording.pause();
 
         // Perform seek
-        seekToFrame(findFrame(0, frames.length - 1, position));
+        seekToFrame(findFrame(0, frames.length - 1, position), function restorePlaybackState() {
 
-        // Restore playback state
-        if (originallyPlaying)
-            recording.play();
+            // Restore playback state
+            if (originallyPlaying)
+                recording.play();
+
+            // Notify that seek has completed
+            if (callback)
+                callback();
+
+        });
 
     };
 
     /**
      * Pauses playback of the recording, if playback is currently in progress.
-     * If playback is not in progress, this function has no effect. Playback is
-     * initially paused when a Guacamole.SessionRecording is created, and must
-     * be explicitly started through a call to play().
+     * If playback is not in progress, this function has no effect. If a seek
+     * operation is in progress, the seek is aborted. Playback is initially
+     * paused when a Guacamole.SessionRecording is created, and must be
+     * explicitly started through a call to play().
      */
     this.pause = function pause() {
+
+        // Abort any in-progress seek / playback
+        abortSeek();
 
         // Stop playback only if playback is in progress
         if (recording.isPlaying()) {
@@ -10564,8 +10657,7 @@ Guacamole.SessionRecording = function SessionRecording(tunnel) {
             if (recording.onpause)
                 recording.onpause();
 
-            // Stop playback
-            window.clearTimeout(playbackTimeout);
+            // Playback is stopped
             startVideoTimestamp = null;
             startRealTimestamp = null;
 
@@ -10741,6 +10833,7 @@ Guacamole.SessionRecording._PlaybackTunnel = function _PlaybackTunnel() {
     };
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -10975,6 +11068,7 @@ Guacamole.Status.Code = {
     "CLIENT_TOO_MANY": 0x031D
 
 };
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -11141,7 +11235,8 @@ Guacamole.StringReader = function(stream) {
      */
     this.onend = null;
 
-};/*
+};
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -11332,7 +11427,8 @@ Guacamole.StringWriter = function(stream) {
      */
     this.onack = null;
 
-};/*
+};
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -12541,6 +12637,7 @@ Guacamole.StaticHTTPTunnel = function StaticHTTPTunnel(url, crossDomain) {
 };
 
 Guacamole.StaticHTTPTunnel.prototype = new Guacamole.Tunnel();
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -12570,7 +12667,8 @@ var Guacamole = Guacamole || {};
  *
  * @type {String}
  */
-Guacamole.API_VERSION = "0.9.12-incubating";
+Guacamole.API_VERSION = "0.9.13-incubating";
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file

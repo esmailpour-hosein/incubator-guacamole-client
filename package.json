@@ -1,6 +1,6 @@
 {
   "name": "guacamole-common-js-npm",
-  "version": "1.0.0",
+  "version": "1.9.13",
   "description": "Npm package for guacamole-common-js of guacamole-client",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
     "cleanret": "cp --help‌",
     "copyToSrc": "cp -r guacamole-common-js/src/main/webapp/modules/ src",
     "concat": "mkdir -p dist && concat-cli -f src/**.js -o dist/guacamole-common-js.js",
-    "uglify": "uglifyjs dist/guacamole-common-js.js -o dist/guacamole-common-js.min.js --source-map dist/guacamole-common-js.min.js.map",
+    "uglify": "uglifyjs dist/guacamole-common-js.js -o dist/guacamole-common-js.min.js --source-map filename=dist/guacamole-common-js.min.js.map",
     "build": "npm run copyToSrc && npm run concat‌‌"
   },
   "repository": {
@@ -33,6 +33,6 @@
   "devDependencies": {
     "concat-cli": "^4.0.0",
     "rimraf": "^2.6.1",
-    "uglifyjs": "^2.4.10"
+    "uglify-js": "^3.0.27"
   }
 }
